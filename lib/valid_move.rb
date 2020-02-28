@@ -1,37 +1,15 @@
 # code your #valid_move? method here
 
-def valid_move?(board, position)
-move = position.to_i
-test = move-1
-if position_taken?(board, test) == false && test.between?(0, 8)
-true
-else
-false
+
+
+def valid_move?(board,index)
+    if board[index] == "" || board[index] == " " || board[index] == nil
+    true
+    elsif board[index] == "X" || board[index] == "O"
+    false
+    else board[index].between?(0, 8) && !(position_taken?(board, index))
+  end
 end
-end
-
- 
-
-
-
-# def valid_move?(board, position)
-# 	spot = position.to_i - 1
-# 	if !position_taken?(board, spot) && spot.between?(0,8)
-# 		true
-# 	else
-# 		false
-# 	end
-# end
-
-
-# def valid_move?(board,index)
-#     if board[index] == "" || board[index] == " " || board[index] == nil
-#     true
-#     elsif board[index] == "X" || board[index] == "O"
-#     false
-#     else board[index].between?(0, 8) && !(position_taken?(board, index))
-#   end
-# end
 
 # def valid_move?(number_entered, board)
 #   number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
