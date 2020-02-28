@@ -8,9 +8,9 @@ def valid_move?(board,index)
   end
 end
 
-def valid_move?(number_entered, board)
-  number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
-end
+# def valid_move?(number_entered, board)
+#   number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
+# end
 
 # position_taken?(index) == false && index.between?(0,8) == true
 
