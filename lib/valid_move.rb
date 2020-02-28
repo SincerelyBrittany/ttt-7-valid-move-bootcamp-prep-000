@@ -4,9 +4,12 @@ def valid_move?(board,index)
     true
     elsif board[index] == "X" || board[index] == "O"
     false
-    else board[index].between?(0,8) && !position_taken?(board, index)
-    true
+    else board[index].between?(0, 8) && !(position_taken?(board, index))
   end
+end
+
+def valid_move?(number_entered, board)
+  number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
 end
 
 # position_taken?(index) == false && index.between?(0,8) == true
